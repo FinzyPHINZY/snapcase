@@ -1,3 +1,4 @@
 # SnapCase
 
 - shadcn
+- clsx
