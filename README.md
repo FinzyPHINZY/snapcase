@@ -7,3 +7,5 @@
 - react animation library
 - uploadthing for file upload
 - zod
+- neon
+- sharp@0.32.6
