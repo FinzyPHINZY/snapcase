@@ -47,8 +47,26 @@ const DesignConfigurator = ({
     material: MATERIALS.options[0],
     finish: FINISHES.options[0],
   });
+
+  const [renderedDimension, setRenderedDimension] = useState({
+    width: imageDimensions.width / 4,
+    height: imageDimensions.height / 4,
+  });
+
+  const [renderedPosition, setRenderedPosition] = useState({
+    x: 150,
+    y: 205,
+  });
+
+  async function saveConfiguration() {
+    try {
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   return (
-    <div className=" relative mt-20 grid grid-cols-3 mb-20 pb-20">
+    <div className=" relative mt-20 grid grid-cols-1 lg:grid-cols-3 mb-20 pb-20">
       <div className="relative h-[37.5rem] overflow-hidden col-span-2 w-full max-w-4xl flex items-center justify-center rounded-lg border-2 border-dashed border-gray-300 p-12 text-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
         <div className="relative w-60 bg-opacity-50 pointer-events-none aspect-[896/1831]">
           <AspectRatio
@@ -77,6 +95,18 @@ const DesignConfigurator = ({
             height: imageDimensions.height / 4,
             width: imageDimensions.width / 4,
           }}
+          onResizeStop={(_, __, ref, ___, { x, y }) => {
+            setRenderedDimension({
+              height: parseInt(ref.style.height.slice(0, -2)),
+              width: parseInt(ref.style.width.slice(0, -2)),
+            });
+
+            setRenderedPosition({ x, y });
+          }}
+          onDragStop={(_, data) => {
+            const { x, y } = data;
+            setRenderedPosition({ x, y });
+          }}
           className="absolute z-20 border-[3px] border-primary"
           lockAspectRatio
           resizeHandleComponent={{
@@ -97,7 +127,7 @@ const DesignConfigurator = ({
         </Rnd>
       </div>
 
-      <div className="h-[37.5rem] flex flex-col bg-white">
+      <div className="h-[37.5rem] w-full col-span-full lg:col-span-1 flex flex-col bg-white">
         <ScrollArea className="relative flex-1 overflow-auto">
           <div
             aria-hidden="true"

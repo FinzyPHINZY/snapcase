@@ -1,5 +1,7 @@
 # SnapCase
 
+## How i built this:
+
 - shadcn - toast, progress, button, etc
 - clsx
 - auth with kinde
