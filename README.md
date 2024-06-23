@@ -11,3 +11,6 @@
 - zod
 - neon
 - sharp@0.32.6
+- postgreSQL
+- prisma
+- HTML canvas element
