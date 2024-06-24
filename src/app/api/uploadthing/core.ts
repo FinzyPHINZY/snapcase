@@ -16,6 +16,10 @@ export const ourFileRouter = {
     })
     .onUploadComplete(async ({ metadata, file }) => {
       // !!! Whatever is returned here is sent to the clientside `onClientUploadComplete` callback
+
+      console.log("onUploadComplete called with metadata:", metadata);
+      console.log("onUploadComplete called with file:", file);
+
       const { configId } = metadata.input;
       const res = await fetch(file.url);
       const buffer = await res.arrayBuffer();
@@ -42,6 +46,9 @@ export const ourFileRouter = {
             croppedImageUrl: file.url,
           },
         });
+
+        // Log configuration update success
+        console.log("Configuration updated with ID:", updatedConfiguration.id);
 
         return { config: updatedConfiguration.id };
       }

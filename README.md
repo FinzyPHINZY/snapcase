@@ -14,3 +14,6 @@
 - postgreSQL
 - prisma
 - HTML canvas element
+- TanStack Query
+- rpc (remote procedure call)
+- useMutation
