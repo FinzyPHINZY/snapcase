@@ -17,3 +17,4 @@
 - TanStack Query
 - rpc (remote procedure call)
 - useMutation
+- payment system with stripe
