@@ -78,10 +78,10 @@ const ThankYou = () => {
         </div>
 
         <div className="flex space-x-6 overflow-hidden mt-4 rounded-xl bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 lg:rounded-2xl">
-          {/* <PhonePreview
+          <PhonePreview
             croppedImageUrl={configuration.croppedImageUrl!}
             color={color!}
-          /> */}
+          />
         </div>
 
         <div>
@@ -90,11 +90,11 @@ const ThankYou = () => {
               <p className="font-medium text-gray-900">Shipping address</p>
               <div className="mt-2 text-zinc-700">
                 <address className="not-italic">
-                  {/* <span className="block">{shippingAddress?.name}</span>
-                <span className="block">{shippingAddress?.street}</span>
+                  <span className="block">{shippingAddress?.name}</span>
+                  <span className="block">{shippingAddress?.street}</span>
                   <span className="block">
                     {shippingAddress?.postalCode} {shippingAddress?.city}
-                  </span> */}
+                  </span>
                 </address>
               </div>
             </div>
@@ -102,11 +102,11 @@ const ThankYou = () => {
               <p className="font-medium text-gray-900">Billing address</p>
               <div className="mt-2 text-zinc-700">
                 <address className="not-italic">
-                  {/* <span className="block">{billingAddress?.name}</span>
+                  <span className="block">{billingAddress?.name}</span>
                   <span className="block">{billingAddress?.street}</span>
                   <span className="block">
                     {billingAddress?.postalCode} {billingAddress?.city}
-                  </span> */}
+                  </span>
                 </address>
               </div>
             </div>
@@ -130,7 +130,7 @@ const ThankYou = () => {
         <div className="space-y-6 border-t border-zinc-200 pt-10 text-sm">
           <div className="flex justify-between">
             <p className="font-medium text-zinc-900">Subtotal</p>
-            {/* <p className="text-zinc-700">{formatPrice(amount)}</p> */}
+            <p className="text-zinc-700">{formatPrice(amount)}</p>
           </div>
           <div className="flex justify-between">
             <p className="font-medium text-zinc-900">Shipping</p>
@@ -138,7 +138,7 @@ const ThankYou = () => {
           </div>
           <div className="flex justify-between">
             <p className="font-medium text-zinc-900">Total</p>
-            {/* <p className="text-zinc-700">{formatPrice(amount)}</p> */}
+            <p className="text-zinc-700">{formatPrice(amount)}</p>
           </div>
         </div>
       </div>
