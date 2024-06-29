@@ -14,7 +14,7 @@
 - postgreSQL
 - prisma
 - HTML canvas element
-- TanStack Query
+- TanStack Query to makes fetching, caching, synchronizing and updating server state easy
 - rpc (remote procedure call)
 - useMutation
 - payment system with stripe

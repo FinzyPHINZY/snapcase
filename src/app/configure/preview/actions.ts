@@ -39,7 +39,7 @@ export const createCheckoutSession = async ({
 
   const existingOrder = await db.order.findFirst({
     where: {
-      // userId: user.id,
+      userId: user.id,
       configurationId: configuration.id,
     },
   });
@@ -73,7 +73,9 @@ export const createCheckoutSession = async ({
     cancel_url: `${process.env.NEXT_PUBLIC_SERVER_URL}/configure/preview?id=${configuration.id}`,
     payment_method_types: ["card", "cashapp"],
     mode: "payment",
-    // shipping_address_collection: {}
+    shipping_address_collection: {
+      allowed_countries: ["US", "NG", "DE", "FR", "GE"],
+    },
     metadata: {
       userId: user.id,
       orderId: order.id,
