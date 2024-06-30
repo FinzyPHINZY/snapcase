@@ -21,3 +21,6 @@
 - webhook events
 - secure admin page only available to admin
 - dashboard page containing sales data and weekly sales goal. redirects to home page if user is not an admin
+- customer email
+- button loading state
+- meta data
