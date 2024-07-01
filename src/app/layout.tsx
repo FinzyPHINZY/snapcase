@@ -5,13 +5,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import Providers from "@/components/Providers";
+import { constructMetadata } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "SnapCase || Memories on Case",
-  description: "Memories on your phone case",
-};
+// export const metadata: constructMetadata();
+export const metadata: ReturnType<typeof constructMetadata> =
+  constructMetadata();
 
 export default function RootLayout({
   children,
