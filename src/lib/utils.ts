@@ -43,5 +43,6 @@ export function constructMetadata({
       creator: "@iamfinzyphinzy_",
     },
     icons,
+    metadataBase: new URL("https://snapcase-one.vercel.app/"),
   };
 }
