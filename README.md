@@ -4,7 +4,8 @@ SnapCase is a web application that allows users to import a picture and order a 
 
 **Link to project:** https://snapcase-one.vercel.app
 
-![alt tag](http://placecorgi.com/1200/650)
+![snapcase_preview](https://github.com/FinzyPHINZY/snapcase/assets/102292855/addd4569-26d7-48ec-b970-681eade41c64)
+
 
 ## How I Built This
 
